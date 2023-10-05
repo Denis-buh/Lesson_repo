@@ -1,7 +1,1 @@
-<<<<<<< HEAD
 some text
-some text to comit
-test
-=======
-some text
->>>>>>> parent of 4925445 (Update test.txt)
