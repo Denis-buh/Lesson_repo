@@ -16,7 +16,7 @@ for i in range(-500, 1000, 55):
     if i < -1:
         print(
             "!{: ^28}!".format(i), 
-            "{: ^29}!".format(
+            "{: ^28}!".format(
                 "{: .3f}".format(i ** 2)
             )
         )
@@ -24,7 +24,7 @@ for i in range(-500, 1000, 55):
     if 0 <= i <= 12.5:
         print(
             "!{: ^28}!".format(i), 
-            "{: ^29}!".format(
+            "{: ^28}!".format(
                 "{: .3f}".format((math.e ** i) + 5 + math.cos(0.001 * i))
             )     
         )
