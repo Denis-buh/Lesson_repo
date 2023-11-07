@@ -10,10 +10,7 @@ def main():
         if number == "break":
             break
         
-        if number.isdigit():
-            x.append(int(number))
-        else:
-            print("Было введено не число")
+        x.append(float(number))
             
     print(f"Полученный список {x}") 
     Y = []
@@ -30,21 +27,8 @@ def main():
     
     Y[in_min], Y[in_max] = max(Y), min(Y) 
     print(f"Полученный список c элементами с из диапазона [1, 2]: {Y}") 
-        
-        
+
+
 if __name__ == "__main__":
     main()
     
-'''
-1
-2
-3
-4
-5
-6
-7
-8
-345
-break
-Полученный список [1, 2, 3, 4]
-Полученный список c элементами с из диапазона [1, 2]: [2, 1]'''
