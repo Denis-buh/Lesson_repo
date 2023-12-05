@@ -2,37 +2,29 @@
 
 
 
-import random
-
-
-def quick_sort(arr:list, index:int=0) -> list:
-    LEN = len(arr)
-    if index == LEN:
-        return arr
-
-    X = arr[index] # Элемент по которому будем сортировать
-    left_arr = []
-    right_arr = []
-    for i in arr:
-        if X >= i:
-            left_arr.append(i)
-        elif X < i:
-            right_arr.append(i)
-    arr = left_arr + right_arr
-    return quick_sort(arr, index + 1)
+def quick_sort(A, nStart, nEnd) -> list:
+    if nStart >= nEnd: return
+    L = nStart; R = nEnd
+    X = A[(L+R)//2]
+    while L <= R:
+        while A[L] < X: L += 1 # разделение
+        while A[R] > X: R -= 1
+        if L <= R:
+            A[L], A[R] = A[R], A[L]
+        L += 1; R -= 1
+        quick_sort( A, nStart, R ) # рекурсивные вызовы
+        quick_sort( A, L, nEnd )
 
     
-
-
 def main():
     '''Функция main'''
     ls = []
     LEN = int(input("Введите длину массива: "))
     for i in range(LEN):
         ls.append(float(input("Введите значение элента: ")))
-    
     print(f"Массив до сортировки: {ls}")
-    print(f"Массив после сортировки: {quick_sort(ls) }")
+    quick_sort(ls, 0, LEN - 1) 
+    print(f"Массив после сортировки: {ls}")
 
 
 if __name__ == "__main__":

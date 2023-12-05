@@ -11,6 +11,7 @@ def main():
         ls.append(float(number))
     for i in ls:
         if i % 3 == 0:
+            print(f"Введенный маcсив: {ls}")
             print("В  массиве есть числа, кратные трем.")
             break
 

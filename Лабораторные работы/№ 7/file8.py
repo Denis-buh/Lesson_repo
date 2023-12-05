@@ -11,6 +11,7 @@ def my_fun(arr):
         else:
             res.append(flag)
             flag = [i, 1]
+    res.append(flag)
     return res
 
 
@@ -24,6 +25,7 @@ def main():
 
     print(f"Введеный массив: {ls}")
     res = my_fun(ls)
+    print(res)
     print(f"Значения элементов образующие серии: {[i[0] for i in res]}")
     print(f"Длины всех серий одинаковых элементов: {[i[1] for i in res]}")
 

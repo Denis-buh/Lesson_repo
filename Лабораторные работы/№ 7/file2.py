@@ -15,7 +15,8 @@ def main():
     ls_ind = []
     for i in range(LEN):
         if ls[i] == X:
-            ls_ind.append(str(i))    
+            ls_ind.append(str(i + 1))    
+    print(f"Введенный маcсив: {ls}")
     print(f"Номера элементов, равных значению X: {'Их нет' if len(ls_ind) == 0 else ' '.join(ls_ind) }")
 
 
