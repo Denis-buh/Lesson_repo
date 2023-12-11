@@ -47,7 +47,7 @@ os.chdir(PROGRAM_DIR) # Переход в папку программы
 
 
 def main():
-    #wright_file()
+    wright_file()
     read_file()
     
     
